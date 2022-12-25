@@ -1,0 +1,921 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA46DCDC-C4D7-4122-AD50-DBC9A8F89BE7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BoggleGame.My.MyApplication</StartupObject>
+    <RootNamespace>BoggleGame</RootNamespace>
+    <AssemblyName>BoggleGame</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BoggleGame.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BoggleGame.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NAudio, Version=1.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.10.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.IO" />
+    <Import Include="System.Text" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Credits.Designer.vb">
+      <DependentUpon>Credits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Credits.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebugForm.Designer.vb">
+      <DependentUpon>DebugForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DebugForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstTimeScreen.Designer.vb">
+      <DependentUpon>FirstTimeScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeScreen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HowToImage.Designer.vb">
+      <DependentUpon>HowToImage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HowToImage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HowToWordList.Designer.vb">
+      <DependentUpon>HowToWordList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HowToWordList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageMatchForm.Designer.vb">
+      <DependentUpon>ImageMatchForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImageMatchForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageMatchGame.Designer.vb">
+      <DependentUpon>ImageMatchGame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImageMatchGame.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageResults.Designer.vb">
+      <DependentUpon>ImageResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImageResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExplain.Designer.vb">
+      <DependentUpon>FormExplain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormExplain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageDifficultySelect.Designer.vb">
+      <DependentUpon>ImageDifficultySelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImageDifficultySelect.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.vb">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Randomise.vb" />
+    <Compile Include="RecordsForm.Designer.vb">
+      <DependentUpon>RecordsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecordsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsTheme.Designer.vb">
+      <DependentUpon>SettingsTheme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsTheme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Title Screen.Designer.vb">
+      <DependentUpon>Title Screen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Title Screen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls.vb" />
+    <Compile Include="WordCustomForm.Designer.vb">
+      <DependentUpon>WordCustomForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WordCustomForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordDifficultySelect.Designer.vb">
+      <DependentUpon>WordDifficultySelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WordDifficultySelect.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WordMemoryGame.Designer.vb">
+      <DependentUpon>WordMemoryGame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WordMemoryGame.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WordResults.Designer.vb">
+      <DependentUpon>WordResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WordResults.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WordResultsList.Designer.vb">
+      <DependentUpon>WordResultsList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WordResultsList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Credits.resx">
+      <DependentUpon>Credits.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebugForm.resx">
+      <DependentUpon>DebugForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstTimeScreen.resx">
+      <DependentUpon>FirstTimeScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExplain.resx">
+      <DependentUpon>FormExplain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HowToImage.resx">
+      <DependentUpon>HowToImage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HowToWordList.resx">
+      <DependentUpon>HowToWordList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageMatchForm.resx">
+      <DependentUpon>ImageMatchForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageMatchGame.resx">
+      <DependentUpon>ImageMatchGame.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageResults.resx">
+      <DependentUpon>ImageResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageDifficultySelect.resx">
+      <DependentUpon>ImageDifficultySelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordsForm.resx">
+      <DependentUpon>RecordsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsTheme.resx">
+      <DependentUpon>SettingsTheme.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Title Screen.resx">
+      <DependentUpon>Title Screen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordCustomForm.resx">
+      <DependentUpon>WordCustomForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordDifficultySelect.resx">
+      <DependentUpon>WordDifficultySelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordMemoryGame.resx">
+      <DependentUpon>WordMemoryGame.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordResults.resx">
+      <DependentUpon>WordResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordResultsList.resx">
+      <DependentUpon>WordResultsList.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\games.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\english.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragbar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\custom_temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\easy_temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hard_temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med_temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\how_temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppIcon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\melon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cherry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\durian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eggplant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cricket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soccer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tennis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgmainmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\custom_temp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fruitveg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standardbg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standardbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standardbg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordbg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgmainmenu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\records_temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagebg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgimageresults.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgimageresults1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgwordresults.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgwordresults1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardback1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardback2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cherry1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cucumber1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\durian1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eggplant1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leek1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\melon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\melon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cherry2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cucumber2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\durian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eggplant2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leek2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soccer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soccer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sprint1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sprint2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swim1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swim2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tennis1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tennis2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basket1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basket2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cricket1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cricket2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backdarka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backdarkb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backdarkc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backlighta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backlightb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backlightc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baselighta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basedarka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baselightb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baselightc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basedarkb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basedarkc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordbg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgmainmenu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgwordresults2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragbar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagebg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgresults.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgresults1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgresults2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgimageresults2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\howtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\howtos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\howtos2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgwordcustom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgwordcustom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgwordcustom2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brella.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brella1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brella2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crown1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crown2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glass2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoe2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sock2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tie2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firsttime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\titlescreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\titlescreen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\titlescreen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\template2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\template1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordresultslist1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordresultslist2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordresultslist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordicondark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordiconlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recordsicondark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsicondark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageiconlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_easy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_med.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_hard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_easy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_med1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_hard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_cust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recordsiconlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsiconlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordiconlight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageiconlight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_easybg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_medbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_hardbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_cloth_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_fruit_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_sport_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_custom_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageiconlight2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageicondark1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordiconlight2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recordsiconlight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageicondark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testshort.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BleepingDemo.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgcredits1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgcredits2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgcredits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openbeep.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirmbeep.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goodjob.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beep.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backbeep.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
